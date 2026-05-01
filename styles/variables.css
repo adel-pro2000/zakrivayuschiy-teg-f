@@ -1,1 +1,35 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  
+  --header-padding: clamp(0px, calc(370px * ((100vw - 375px) / (1440 - 375))), 370px);
+  --header-content-margin: clamp(122px, calc(122px + (130 - 122) * ((100vw - 375px) / (1440 - 375))), 130px);
+  --width-container: clamp(375px, calc(375px + (700 - 375) * ((100vw - 375px) / (1440 - 375))), 700px);
+  --width-modal-window: clamp(341px, calc(336.77px + 1.127vw), 353px);
+  --width-modal-button: clamp(261px, calc(249.7px + 3.005vw), 293px);
+  --base-font: 'Inter-Variable', sans-serif;
+  --accent-font: 'PressStart2P', 'Courier New', Courier, monospace;
+  --title-font-size: clamp(14px, calc(14px + 9 * ((100vw - 375px) / 1065)), 23px);
+  --logo-font-size: clamp(49px, calc(49px + 16 * ((100vw - 375px) / 1065)), 65px);
+  --article-font-size: clamp(14px, calc(14px + 6 * ((100vw - 375px) / 1065)), 20px);
+  --bc-img: repeating-linear-gradient(
+      to right,
+      #d3d3d3 0 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      #d3d3d3 0 2px,
+      transparent 2px 4px
+    ),
+    linear-gradient(
+      to bottom,
+      #e7e7e7 0 0.01%,
+      #1a1a1a 100%
+    );
+  /*--bc-size: clamp(667px, calc(27.51vw + 563.83px), 960px);*/
+  --label-color: rgba(255, 255, 255, 0.6);
+  --accent-color: rgba(0, 0, 0, 1);
+  --heart-contour-color: rgba(0, 0, 0, 1);
+ 
+  --contour-color: #FF0000;
+}
