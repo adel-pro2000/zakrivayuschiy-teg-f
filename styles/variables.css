@@ -26,10 +26,11 @@
       #e7e7e7 0 0.01%,
       #1a1a1a 100%
     );
-  /*--bc-size: clamp(667px, calc(27.51vw + 563.83px), 960px);*/
   --label-color: rgba(255, 255, 255, 0.6);
   --accent-color: rgba(0, 0, 0, 1);
+  --bc-color: #fff;
+  --black-color: #000;
   --heart-contour-color: rgba(0, 0, 0, 1);
- 
   --contour-color: #FF0000;
+  --border: 2px solid #000;
 }
