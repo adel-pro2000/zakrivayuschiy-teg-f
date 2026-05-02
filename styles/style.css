@@ -71,6 +71,7 @@ ul {
 
 .article-sprint__title {
   font-family: var(--base-font);
+  font-variation-settings: 'wght' var(--article-title-font-weight);
   font-size: 18px;
   padding-left: 10px;
   padding-right: 10px;
@@ -80,16 +81,14 @@ ul {
   line-height: 22px;
 }
 
-.article-sprint__content {
-  width: 100%;
-}
-
+.article-sprint__content,
 .article-sprint__image {
   width: 100%;
 }
 
 .article-sprint__text {
   font-family: var(--base-font);
+  font-variation-settings: 'wght' var(--article-text-font-weight);
   font-size: 18px;
   padding-top: 22px;
   padding-left: 25px;
@@ -103,7 +102,7 @@ ul {
   column-gap: 8px;
   margin-block-start: 27px;
   margin-block-end: 25px;
-  margin-inline-end: 25px;
+  padding-inline: 25px;
   align-items: center;
   align-content: center;
 }
@@ -127,11 +126,15 @@ ul {
 }
 
 .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   overflow: hidden;
   transition: box-shadow 0.3s ease;
   cursor: pointer;
   background-color: var(--bc-color);
+  border: var(--border);
 }
 
 .button::before {
@@ -149,6 +152,9 @@ ul {
 
 .button:focus {
   outline: none;
+}
+
+.button:focus-visible {
   box-shadow: 2px 2px 0 var(--accent-color);
 }
 
@@ -159,30 +165,36 @@ ul {
   mix-blend-mode: difference;
   font-family: var(--accent-font);
   font-size: 14px;
+  line-height: 90%;
 }
 
 .card__like-button {
-  border: var(--border);
-  background-color: var(--bc-color);
   inline-size: 130px;
   block-size: 38px;
   padding-top: 2px;
 }
 
 .card__icon-button {
-  border: none;
+  border: 2px solid transparent;
   background-color: transparent;
   padding: 0;
   cursor: pointer;
   display: flex;
-  flex-wrap: wrap;
   width: 39px;
   height: 38px;
   align-items: center;
   justify-content: center;
   align-content: center;
-  outline: 0;
-  transition: border 0.3s ease;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border-color: var(--accent-color);
 }
 
 .sparks {
@@ -277,27 +289,13 @@ ul {
 }
 
 .save-as-button {
-  border: var(--border);
-  background-color: var(--bc-color);
   font-family: var(--accent-font);
   font-size: 14px;
   inline-size: 335px;
   block-size: 55px;
-  padding-top: 2px;
   margin-block-start: 50px;
-  justify-content: center;
-  align-items: center;
-  display: block;
   margin-inline: auto;
-}
-
-.save-as-button .button__text {
-  padding-bottom: 0;
-  border-bottom-width: 10px;
-  padding-top: 0;
-  margin-top: 0;
-  bottom: 2px;
-  right: 2px;
+  gap: 8px;
 }
 
 .floppy-icon {
@@ -351,10 +349,6 @@ ul {
 .modal-button {
   block-size: 38px;
   inline-size: var(--width-modal-button);
-  border: var(--border);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-top: auto;
 }
 
@@ -366,14 +360,6 @@ ul {
 }
 
 @media (width <= 375px) {
-  .header {
-    max-inline-size: 375px;
-  }
-
-  .main {
-    max-inline-size: 100%;
-  }
-
   .header,
   .main,
   .article-sprint,
@@ -387,10 +373,7 @@ ul {
   }
 
   .save-as-button {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 10px;
     inline-size: 306px;
     block-size: 84px;

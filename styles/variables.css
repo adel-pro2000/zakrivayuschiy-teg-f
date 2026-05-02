@@ -1,13 +1,13 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-  
-  --header-padding: clamp(0px, calc(370px * ((100vw - 375px) / (1440 - 375))), 370px);
   --header-content-margin: clamp(122px, calc(122px + (130 - 122) * ((100vw - 375px) / (1440 - 375))), 130px);
   --width-container: clamp(375px, calc(375px + (700 - 375) * ((100vw - 375px) / (1440 - 375))), 700px);
   --width-modal-window: clamp(341px, calc(336.77px + 1.127vw), 353px);
   --width-modal-button: clamp(261px, calc(249.7px + 3.005vw), 293px);
   --base-font: 'Inter-Variable', sans-serif;
   --accent-font: 'PressStart2P', 'Courier New', Courier, monospace;
+  --article-title-font-weight: 715;
+  --article-text-font-weight: 410;
   --title-font-size: clamp(14px, calc(14px + 9 * ((100vw - 375px) / 1065)), 23px);
   --logo-font-size: clamp(49px, calc(49px + 16 * ((100vw - 375px) / 1065)), 65px);
   --article-font-size: clamp(14px, calc(14px + 6 * ((100vw - 375px) / 1065)), 20px);
